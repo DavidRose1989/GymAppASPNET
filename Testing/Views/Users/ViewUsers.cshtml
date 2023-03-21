@@ -1,0 +1,37 @@
+﻿@model Users
+
+<h3>@Model.Fname Information</h3>
+
+<table class="table">
+    <tr>
+        <th>MID</th>
+        <th>Fname</th>
+        <th>Lname</th>
+        <th>Gender</th>
+        <th>Dob</th>
+        <th>Mobile</th>
+        <th>Email</th>
+        <th>JoinDate</th>
+        <th>Gymtime</th>
+        <th></th>Maddress
+        <th>MembershipPeriod</th>
+    </tr>
+    <tr>
+        <td>@Model.MID</td>
+        <td>@Model.Fname</td>
+        <td>@Model.Lname</td>
+        <td>@Model.Gender</td>
+        <td>@Model.Dob</td>
+        <td>@Model.Mobile</td>
+        <td>@Model.Email</td>
+        <td>@Model.JoinDate</td>
+        <td>@Model.Gymtime</td>
+        <td>@Model.Maddress</td>
+        <td>@Model.MembershipPeriod</td>
+        
+    </tr>
+</table>
+
+<div style="display: block">
+    <a href="/Users/UpdateUsers/@Model.MID">Update this User</a>
+</div>

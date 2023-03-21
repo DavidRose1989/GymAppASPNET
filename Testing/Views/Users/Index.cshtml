@@ -1,0 +1,41 @@
+﻿@model IEnumerable<Users>
+
+<h2>Users</h2>
+
+<div style="display: block">
+    <a href="/Users/InsertUsers/">Create a New Users</a>
+</div>
+
+<table class="table">
+    <tr>
+        <th>ID</th>
+        <th>Fname</th>
+        <th>Lname</th>
+        <th>Gender</th>
+        <th>Dob</th>
+        <th>Mobile</th>
+        <th>Email</th>
+        <th>JoinDate</th>
+        <th>Gymtime</th>
+        <th>Maddress</th>
+        <th>MembershipPeriod</th>
+    </tr>
+
+    @foreach (var users in @Model)
+    {
+        <tr>
+            <td><a href=/Users/ViewUsers/@users.MID>@users.MID</a></td>
+            <td>@users.Fname</td>
+            <td>@users.Lname</td>
+            <td>@users.Gender</td>
+            <td>@users.Dob</td>
+            <td>@users.Mobile</td>
+            <td>@users.Email</td>
+            <td>@users.JoinDate</td>
+            <td>@users.Gymtime</td>
+            <td>@users.Maddress</td>
+            <td>@users.MembershipPeriod</td>
+        </tr>
+    }
+
+</table>

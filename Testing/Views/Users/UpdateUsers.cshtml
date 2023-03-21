@@ -1,0 +1,40 @@
+﻿@model Users
+
+<h2>Update @Model.Fname</h2>
+
+@using (Html.BeginForm("UpdateUsersToDatabase", "Users", "Post"))
+{
+    <input asp-for="MID" type="hidden" value="@Model.MID" />
+
+    <label asp-for="Fname" class="control-label">Fname</label>
+    <input type="text" name="Fname" class="form-control" value="@Model.Fname" />
+
+    <label asp-for="Lname" class="control-label">Lname</label>
+    <input type="text" name="Lname" class="form-control" value="@Model.Lname" />
+
+    <label asp-for="MID" class="control-label">MID</label>
+    <input type="number" step="0.01" name="MID" class="form-control" value="@Model.MID" />
+
+    <label asp-for="Gender" class="control-label">Gender</label>
+    <input type="text" name="Gender" class="form-control" value="@Model.Gender" />
+
+    <label asp-for="Dob" class="control-label">Dob</label>
+    <input type="text" name="Dob" class="form-control" value="@Model.Dob" />
+
+    <label asp-for="Mobile" class="control-label">Mobile</label>
+    <input type="number" name="Mobile" class="form-control" value="@Model.Mobile" />
+
+    <label asp-for="Email" class="control-label">Email</label>
+    <input type="text" name="Email" class="form-control" value="@Model.Email" />
+
+    <label asp-for="JoinDate" class="control-label">JoinDate</label>
+    <input type="text" name="JoinDate" class="form-control" value="@Model.JoinDate" />
+
+    <label asp-for="Maddress" class="control-label">Maddress</label>
+    <input type="text" name="Maddress" class="form-control" value="@Model.Maddress" />
+
+    <label asp-for="MembershipPeriod" class="control-label">MembershipPeriod</label>
+    <input type="text" name="MembershipPeriod" class="form-control" value="@Model.MembershipPeriod" />
+
+    <input type="submit" value="Update Users" class="btn btn-primary" />
+}
