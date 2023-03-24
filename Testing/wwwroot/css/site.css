@@ -2,7 +2,7 @@
 for details on configuring this project to bundle and minify static web assets. */
 
 nav.navbar {
-    background-color: white;
+    background-color: darkgrey;
 }
 
 a.navbar-brand {
@@ -92,8 +92,8 @@ body {
 
 .container-img {
     position: absolute;
-    opacity: 1;
     overflow: hidden;
+    opacity: .08;
     z-index: 1;
     height: 100vh;
     right: 0;
@@ -105,11 +105,13 @@ body {
 
 .container-img img {
     height: 100vh;
+    
 }
 
 .body-container {
     z-index: 2;
     position: relative;
+    
 }
 
 .form-control {
