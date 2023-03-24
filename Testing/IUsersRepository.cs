@@ -15,8 +15,10 @@ namespace Testing
 
         public void InsertUsers(Users usersToInsert);
 
-        public IEnumerable<Users> GetCategories();
+        //public IEnumerable<Users> GetCategories();
 
-        public Users AssignCategory();
+        //public Users AssignCategory();
+
+        public void DeleteUsers(Users users);
     }
 }

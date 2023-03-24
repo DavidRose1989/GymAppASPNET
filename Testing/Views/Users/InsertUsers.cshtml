@@ -1,5 +1,7 @@
 ﻿@model Users
 
+
+
 <h2>Create a New Users</h2>
 
 @using (Html.BeginForm("InsertUsersToDatabase", "Users", "Post"))
@@ -22,7 +24,7 @@
     <input type="text" name="Dob" class="form-control" value="" />
 
     <label asp-for="Mobile" class="control-label">Mobile</label>
-    <input type="number" name="Mobile" class="form-control" />
+    <input type="text" name="Mobile" class="form-control" />
 
     <label asp-for="Email" class="control-label">Email</label>
     <input type="text" name="Email" class="form-control" value="" />
@@ -33,18 +35,23 @@
     <label asp-for="Maddress" class="control-label">Maddress</label>
     <input type="text" name="Maddress" class="form-control" value="" />
 
-    <label asp-for="MembershipPeriod" class="control-label">MembershipPeriod</label>
-    <input type="text" name="MembershipPeriod" class="form-control" value="" />
-
-    <div class="form-group">
-        <label for="">Select a MID</label>
-        <select class="form-control" name="CategoryID" value="">
-            @foreach (var cat in Model.MIDs)
+    @*<label asp-for="MembershipPeriod" class="control-label">MembershipPeriod</label>*@
+    @*<input type="text" name="MembershipPeriod" class="form-control" value="" />*@
+    
+    <div class=" form-check-group">
+        <label for="">MemberShip Period</label>
+        <select class="form-control" name="MembershipPeriod" value="">
+            @foreach (var cat in Model.NewEntryCategories)
             {
-                <option value="@cat.MID">@cat.Fname @cat.Lname @cat.Gender @cat.Dob @cat.Mobile @cat.Mobile @cat.Email @cat.JoinDate @cat.Maddress @cat.MembershipPeriod</option>
+                <option value="@cat">@cat</option>
             }
+
         </select>
+
     </div>
 
+   
     <input type="submit" value="Create Users" class="btn btn-primary" />
+    
+    
 }

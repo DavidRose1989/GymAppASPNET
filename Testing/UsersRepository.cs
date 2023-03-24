@@ -38,27 +38,28 @@ namespace Testing
 
         public void InsertUsers(Users usersToInsert)
         {
-            _connection.Execute("INSERT INTO users ( FNAME, LNAME, MID, GENDER, DOB, MOBILE, EMAIL, JOINDATE, GYMTIME, MADDRESS, MEMBERSHIPPERIOD, ) VALUES (@fname, @lname, @mid, @gender, @dob, @mobile, @email, @joinDate,@gymtime, @maddress, @membershipPeriod);",
+            _connection.Execute("INSERT INTO users ( FNAME, LNAME, MID, GENDER, DOB, MOBILE, EMAIL, JOINDATE, GYMTIME, MADDRESS, MEMBERSHIPPERIOD ) VALUES (@fname, @lname, @mid, @gender, @dob, @mobile, @email, @joinDate,@gymtime, @maddress, @membershipPeriod);",
                 new { fname = usersToInsert.Fname, lname = usersToInsert.Lname, mid = usersToInsert.MID, gender = usersToInsert.Gender, dob = usersToInsert.Dob, mobile = usersToInsert.Mobile, email = usersToInsert.Email, joindate = usersToInsert.JoinDate, gymtime = usersToInsert.Gymtime, maddress = usersToInsert.Maddress, membershipperiod = usersToInsert.MembershipPeriod });
         }
 
-        public IEnumerable<Users> GetCategories() 
+        //public IEnumerable<Users> GetCategories() 
+        //{
+        //    return _connection.Query<Users>("SELECT * FROM users;");
+        //}
+
+        //public Users AssignCategory()
+        //{
+        //    var categoryList = GetCategories();
+        //    var users = new Users();
+        //    users.NewEntry = categoryList;
+
+        //    return users;
+        //}
+
+        public void DeleteUsers(Users users)
         {
-            return _connection.Query<Users>("SELECT * FROM users;");
+            _connection.Execute("DELETE FROM USERS WHERE MID = @id;", new { id = users.MID });
+            ;
         }
-
-        public Users AssignCategory()
-        {
-            var categoryList = GetCategories();
-            var users = new Users();
-            users.MIDs = categoryList;
-
-            return users;
-        }
-
-
-
-
-
     }
 }

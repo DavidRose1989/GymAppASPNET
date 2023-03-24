@@ -46,8 +46,8 @@ namespace Testing.Controllers
 
         public IActionResult InsertUsers()
         {
-            var use = repo.AssignCategory();
-            return View(use); 
+            var user = new Users();
+            return View(user); 
         }
 
         public IActionResult InsertUsersToDatabase(Users UserstoInsert)
@@ -55,6 +55,13 @@ namespace Testing.Controllers
             repo.InsertUsers(UserstoInsert);
             return RedirectToAction("Index");
 
+        }
+
+        public IActionResult DeleteUsers(Users users)
+        {
+            repo.DeleteUsers(users);
+
+            return RedirectToAction("Index");
 
         }
     }

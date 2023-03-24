@@ -13,7 +13,7 @@
         <th>Email</th>
         <th>JoinDate</th>
         <th>Gymtime</th>
-        <th></th>Maddress
+        <th>Maddress</th>
         <th>MembershipPeriod</th>
     </tr>
     <tr>
@@ -34,4 +34,13 @@
 
 <div style="display: block">
     <a href="/Users/UpdateUsers/@Model.MID">Update this User</a>
+</div>
+
+<div style="display: block">
+
+    @using (Html.BeginForm("DeleteUsers", "Users", "Post"))
+    {
+        <input type="hidden" asp-for="MID" value="@Model.MID" />
+        <input type="submit" onclick="return confirm('Are you sure?')" value="Delete this user" />
+    }
 </div>

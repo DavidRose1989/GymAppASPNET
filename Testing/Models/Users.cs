@@ -17,7 +17,7 @@ namespace Testing.Models
 
         public string Dob { get; set; }
 
-        public decimal Mobile { get; set; }  
+        public  string Mobile { get; set; }  
         
         public string Email { get; set; }
 
@@ -29,6 +29,8 @@ namespace Testing.Models
 
         public string MembershipPeriod { get; set; }
 
-        public IEnumerable<Users> MIDs { get; set; }
+        public string NewEntry { get; set; }
+
+        public List<string> NewEntryCategories { get; set; } = new List<string>() { "Month to Month", "3 Month", "6 Month", "12 Month" };
     }
 }

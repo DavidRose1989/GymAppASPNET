@@ -10,7 +10,7 @@
 
         public string Dob { get; set; }
 
-        public int Mobile { get; set; }
+        public string Mobile { get; set; }
 
         public string Email { get; set; }
 
@@ -22,6 +22,6 @@
 
         public string MembershipPeriod { get; set; }
 
-        public string NewEntry { get; set; }
+       
     }
 }

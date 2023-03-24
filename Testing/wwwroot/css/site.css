@@ -1,10 +1,14 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
+nav.navbar {
+    background-color: white;
+}
+
 a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
 }
 
 /* Provide sufficient contrast against white background */
@@ -19,9 +23,9 @@ a {
 }
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
 }
 
 /* Sticky footer styles
@@ -33,6 +37,15 @@ html {
   html {
     font-size: 16px;
   }
+}
+
+.navbar-nav {
+    justify-content: center;
+
+}
+
+.container {
+    text-align: center;
 }
 
 .border-top {
@@ -61,6 +74,7 @@ html {
 body {
     /* Margin bottom by footer height */
     margin-bottom: 60px;
+    background-color: #b0bcc9;
 }
 .footer {
   position: absolute;
@@ -68,4 +82,37 @@ body {
   width: 100%;
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
+}
+
+.content-area {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.container-img {
+    position: absolute;
+    opacity: 1;
+    overflow: hidden;
+    z-index: 1;
+    height: 100vh;
+    right: 0;
+    top: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center right;
+}
+
+.container-img img {
+    height: 100vh;
+}
+
+.body-container {
+    z-index: 2;
+    position: relative;
+}
+
+.form-control {
+
+    background-color: lightgrey;
 }
